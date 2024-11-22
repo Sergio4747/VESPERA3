@@ -1,0 +1,273 @@
+/*ROMEO PAGINA*/
+
+/* Reseteo básico de márgenes y rellenos */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo básico para el cuerpo de la página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color:  #301e2b;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Contenedor principal */
+#contenedor {
+    width: 100%;
+    max-width: 960px;
+    margin: 20px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #3c2635;
+}
+
+/* Estilo para el header */
+header {
+    background: #0F0F1E;
+    height: 100px;
+    display: flex;
+    justify-content: center; /* Centra los elementos dentro del header */
+    align-items: center; /* Alinea el título verticalmente en el centro */
+}
+
+/* Título dentro del header */
+header h1 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0; /* Elimina los márgenes alrededor del h1 */
+}
+
+/* Logo y texto del logo */
+.logo {
+    text-align: center;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo span {
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: bold;
+    float: right;
+}
+
+/* Estilo para los botones de navegación */
+.Botones a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    transition: background 0.3s ease;
+}
+
+.Botones a:hover {
+    background-color: #D90000;
+    border-radius: 5px;
+}
+
+/* Redirección a redes sociales */
+#redes {
+    display: flex;
+    align-items: center;
+}
+
+#redes img {
+    margin: 5px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+#redes img:hover {
+    transform: scale(1.1);
+}
+
+/* Barra de navegación */
+nav {
+    background-color: #D90000;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+nav a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #333;
+}
+
+/* Banner */
+#baner {
+    width: 100%;
+    margin-top: 20px;
+    height: 500px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;  /* Cambiado para permitir posicionamiento absoluto */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#baner img {
+    width: 100%;
+    max-width: 915px;
+    border-radius: 10px;
+}
+
+/* Título del banner centrado */
+#baner h2 {
+    position: absolute;  /* Posicionamiento absoluto respecto al contenedor del banner */
+    top: 50%;  /* Centrado verticalmente */
+    left: 50%;  /* Centrado horizontalmente */
+    transform: translate(-50%, -50%);  /* Ajuste fino para centrar perfectamente */
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Contenido principal */
+#Contenido {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Artículos */
+.Articulos, .Articulos1 {
+    width: 100%;
+    padding: 15px;
+    background-color: #9797A6;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.Articulos h2, .Articulos1 h2 {
+    font-size: 22px;
+    color: #A40000;
+    border-bottom: 5px solid #A40000;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.Auto {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.Articulos img, .Articulos1 img {
+    float: right;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.Articulos p, .Articulos1 p {
+    font-size: 16px;
+    color: #000000;
+    text-align: justify;
+    padding: 10px;
+}
+
+/* Aside */
+aside {
+    width: 240px;
+    background-color: #5F9EA0;
+    border-radius: 10px;
+    padding: 15px;
+    margin-left: 20px;
+}
+
+aside h3 {
+    font-size: 20px;
+    color: #A40000;
+    border-bottom: 5px solid #A40000;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+aside p {
+    font-size: 16px;
+    color: #000;
+    text-align: justify;
+    padding: 10px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #0F0F1E;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    clear: both;
+    font-size: 14px;
+}
+
+footer p {
+    font-style: italic;
+}
+
+/* Media Queries para hacer la página más responsiva */
+@media screen and (max-width: 768px) {
+    #contenedor {
+        width: 100%;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .logo, .Botones a {
+        font-size: 14px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        padding: 10px;
+        width: 100%;
+    }
+
+    #Contenido {
+        flex-direction: column;
+    }
+
+    .Articulos, .Articulos1 {
+        width: 100%;
+    }
+
+    aside {
+        width: 500px;
+        margin-left: 0;
+    }
+}

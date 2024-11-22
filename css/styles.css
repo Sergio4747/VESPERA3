@@ -1,0 +1,420 @@
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+
+   
+
+/* Ajustes específicos para pantallas pequeñas */
+@media (max-width: 768px) {
+    #inicio h2 {
+        font-size: 1.8rem; /* Reduce el tamaño del texto */
+        padding: 15px; /* Ajusta el espaciado interno */
+    }
+}
+
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #000000;
+}
+
+/* Sección de inicio con banner */
+#inicio {
+    position: relative; /* Contenedor para elementos posicionados */
+    background-image: url('../IMAGENES/banner.jpg'); /* Ruta de la imagen del banner */
+    background-size: cover; /* Cubre todo el espacio disponible */
+    background-position: center; /* Centra la imagen */
+    height: 100vh; /* Altura completa de la ventana */
+    display: flex; /* Centra contenido en flexbox */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    text-align: center; /* Alinea el texto al centro */
+    color: white; /* Texto en blanco */
+    overflow: hidden; /* Evita desbordes */
+}
+
+/* Filtro oscuro sobre el banner */
+#inicio::before {
+    content: ""; /* Genera un pseudo-elemento */
+    position: absolute; /* Cubre toda la sección */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Filtro oscuro */
+    z-index: 1; /* Coloca el filtro debajo del contenido */
+}
+
+/* Contenido encima del banner */
+#inicio .hero-content {
+    position: relative; /* Coloca el contenido por encima del filtro */
+    z-index: 2; /* Asegura que el contenido esté sobre el filtro */
+}
+
+#inicio h2 {
+    font-size: 2.5rem; /* Ajusta el tamaño del título */
+    margin-bottom: 10px;
+}
+
+#inicio p {
+    font-size: 1.2rem; /* Ajusta el tamaño del párrafo */
+    margin-bottom: 20px;
+}
+
+#inicio button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.hero button a {
+    background-color: #1e1e1f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.hero button a:hover {
+    background-color: #1e1e1f;
+}
+
+/* Section Titles */
+section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Sobre Nosotros */
+#sobre-nosotros {
+    padding: 60px 20px;
+    background-color: #222222;
+    text-align: center;
+    border-top: 5px solid #000000;
+    border-bottom: 5px solid #000000;
+}
+
+/* Inventario */
+#inventario {
+    padding: 60px 20px;
+    background-color: white;
+}
+
+.vehiculos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.vehiculo {
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.vehiculo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.vehiculo img {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+.vehiculo h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #000000;
+}
+
+.vehiculo p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #4b5563;
+}
+
+.vehiculo button a {
+    padding: 10px 15px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.vehiculo button a:hover {
+    background-color: #3b82f6;
+}
+
+/* Footer */
+footer {
+    background-color: #ff0000;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 0.9em;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;  
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #000000;
+}
+
+/* Archivo: styles.css */
+
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #ffffff; /* Fondo neutro */
+    padding: 20px 10px;
+    text-align: center;
+    border-bottom: 2px solid #000000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    color: #000000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000; /* Azul para enlaces */
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #000000; /* Azul más oscuro al pasar el cursor */
+}
+
+/* Sección de introducción */
+#financiamiento-intro {
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#financiamiento-intro h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#financiamiento-intro p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 10px auto;
+    max-width: 600px;
+}
+
+#financiamiento-intro ul {
+    list-style: square;
+    margin: 20px auto;
+    padding: 0;
+    max-width: 600px;
+    text-align: left;
+    color: #555;
+}
+
+#financiamiento-intro ul li {
+    margin: 10px 0;
+}
+
+/* Pasos de financiamiento */
+#pasos-financiamiento {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#pasos-financiamiento h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#pasos-financiamiento ol {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 600px;
+    text-align: left;
+    color: #555;
+}
+
+#pasos-financiamiento ol li {
+    margin-bottom: 15px;
+}
+
+#pasos-financiamiento ol li strong {
+    color: #007acc; /* Resalta los títulos */
+}
+
+/* Sección de beneficios */
+#beneficios {
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#beneficios h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#beneficios ul {
+    list-style: circle;
+    margin: 20px auto;
+    padding: 0;
+    max-width: 600px;
+    text-align: left;
+    color: #555;
+}
+
+#beneficios ul li {
+    margin: 10px 0;
+}
+
+/* Imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #007acc;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+
